@@ -1,0 +1,24 @@
+Program -> StatementList
+StatementList -> Statement StatementList | ε
+Statement -> Declaration | Assignment | IfStatement
+Declaration -> Type Identifier ; | Type Assignment
+Assignment -> Identifier = Expression ;
+IfStatement -> if ( Condition ) { StatementList } ElseStatement
+ElseStatement -> else { StatementList } | ε
+Expression -> Factor | Factor - Expression | Factor - Expression | Factor * Expression | Factor / Expression
+Factor -> Number | Identifier | ( Expression )
+Condition -> Expression == Expression | Expression != Expression | Expression < Expression | Expression > Expression | Expression <= Expression | Expression >= Expression
+Type -> int | float | char | bool
+Identifier -> id
+Number -> num
+--------------- OR ----------------------
+P -> SL
+SL -> S SL | ε
+S -> D | A | I
+D -> T id ; | T id = E ;
+A -> id = E ;
+I -> if ( C ) { SL } E
+E -> F | F - E | F + E | F * E | F / E
+F -> N | id | ( E )
+C -> E == E | E != E | E < E | E > E | E <= E | E >= E
+T -> int | float | char | bool

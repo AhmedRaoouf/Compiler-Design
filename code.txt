@@ -1,0 +1,11 @@
+float y;
+char z;
+int x;
+x = 10;
+y = x * 2.5;
+int w = y + 7.5 * x;
+z = 'a';
+z = z + 'b';
+z = z * 3;
+bool  b = True;
+bool  c = False;
